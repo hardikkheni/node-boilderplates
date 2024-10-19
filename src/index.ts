@@ -1,3 +1,5 @@
-import { sum, sub } from './app';
+function main() {
+  console.log('Hello World');
+}
 
-console.log(sum(1, 1));
+main();
