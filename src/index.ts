@@ -1,4 +1,4 @@
-import { sum } from './sum';
+import { sum } from '@/sum';
 
 function main() {
   const n = sum(1, 2);
