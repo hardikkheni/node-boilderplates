@@ -1,5 +1,8 @@
+import { sum } from './sum';
+
 function main() {
-  console.log('Hello World');
+  const n = sum(1, 2);
+  console.log(n);
 }
 
 main();
