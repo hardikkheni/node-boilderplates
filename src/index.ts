@@ -1,8 +1,11 @@
-import { sum } from './sum';
+import app from '@/app';
 
-function main() {
-  const n = sum(1, 2);
-  console.log(n);
+const port = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV !== 'development') {
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
 }
 
-main();
+export const viteNodeApp = app;

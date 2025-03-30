@@ -1,18 +1,33 @@
-/// <reference types="vitest/config" />
-
-// Configure Vitest (https://vitest.dev/config/)
-
-import { fileURLToPath } from 'url';
+import path from 'node:path';
 import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
+import { VitePluginNode } from 'vite-plugin-node';
 
 export default defineConfig({
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': path.resolve(__dirname, './src'),
     },
   },
-  test: {
-    /* for example, use global to avoid globals imports (describe, test, expect): */
-    // globals: true,
+  plugins: [
+    VitePluginNode({
+      adapter: 'express',
+      appPath: './src/index.ts',
+      exportName: 'viteNodeApp',
+    }),
+    checker({
+      typescript: true,
+    }),
+  ],
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+    ssr: true,
+    rollupOptions: {
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: 'src',
+      },
+    },
   },
 });
