@@ -1,36 +1,20 @@
 {
-  "name": "dns",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "node-boilderplates",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --watch src test --ext ts,js --exec 'pnpm build && node --inspect ./dist'",
-    "start": "node ./dist",
-    "build": "tsc --project tsconfig.build.json",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "test": "vitest",
-    "test:ui": "vitest --ui",
-    "test:run": "vitest run"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "nodemon": "^3.1.7",
-    "vite": "^5.4.9",
-    "vitest": "^2.1.3"
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "node dist/server.js"
   },
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
-    "@types/node": "^22.7.7",
-    "@vitest/ui": "2.1.3",
-    "eslint": "^9.13.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "globals": "^15.11.0",
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.10.0"
+    "@types/express": "^5.0.1",
+    "typescript": "~5.7.2",
+    "vite": "^6.2.3",
+    "vite-plugin-node": "^5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
   }
 }
