@@ -16,8 +16,14 @@ export default defineConfig({
     }),
   ],
   build: {
-    target: "node22",
     outDir: "dist",
     emptyOutDir: true,
+    ssr: true,
+    rollupOptions: {
+      output: {
+        preserveModules: true,
+        preserveModulesRoot: "src",
+      },
+    },
   },
 });
