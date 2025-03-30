@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "node dist/server.js"
+    "start": "node dist/index.cjs"
   },
   "devDependencies": {
     "@types/express": "^5.0.1",
