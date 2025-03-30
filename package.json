@@ -13,6 +13,7 @@
     "@types/node": "^22.13.14",
     "typescript": "~5.7.2",
     "vite": "^6.2.3",
+    "vite-plugin-checker": "^0.9.1",
     "vite-plugin-node": "^5.0.0"
   },
   "dependencies": {

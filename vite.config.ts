@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import { VitePluginNode } from "vite-plugin-node";
 import path from "path";
+import checker from "vite-plugin-checker";
 
 export default defineConfig({
   resolve: {
@@ -13,6 +14,9 @@ export default defineConfig({
       adapter: "express",
       appPath: "./src/index.ts",
       exportName: "viteNodeApp",
+    }),
+    checker({
+      typescript: true,
     }),
   ],
   build: {
