@@ -1,11 +1,14 @@
 import express from 'express';
 
+import router from '@/routes';
+import { response } from '@/utils/helpers';
+
 const app = express();
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (_req, res) => {
-  res.send('welcome to the service');
-});
+app.use('/', router);
 
+app.response.respond = response.respond;
 export default app;

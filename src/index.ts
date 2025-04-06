@@ -1,3 +1,6 @@
+import 'dotenv/config';
+import 'zod-openapi/extend';
+
 import app from '@/app';
 
 const port = process.env.PORT || 3000;
