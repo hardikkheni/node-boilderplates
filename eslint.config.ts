@@ -8,9 +8,10 @@ export default antfu({
     indent: 2,
     semi: true,
   },
-  ignores: ['.pnpm-store/*'],
+  ignores: ['.pnpm-store/**', 'drizzle'],
 }, {
   rules: {
+    'ts/method-signature-style': ['error', 'method'],
     'ts/no-redeclare': 'off',
     'ts/consistent-type-definitions': ['error', 'type'],
     'no-console': ['off'],
@@ -22,7 +23,7 @@ export default antfu({
     }],
     'unicorn/filename-case': ['error', {
       case: 'kebabCase',
-      ignore: ['README.md'],
+      ignore: ['README.md', 'drizzle'],
     }],
   },
 });
