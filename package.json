@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "start": "node ./dist/index.cjs",
-    "lint": "eslint",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix",
     "prepare": "husky"
   },
@@ -28,6 +28,6 @@
     "vite-plugin-node": "^5.0.1"
   },
   "lint-staged": {
-    "*.ts": "pnpm lint:fix"
+    "*": "pnpm lint"
   }
 }
