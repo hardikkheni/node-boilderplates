@@ -8,7 +8,8 @@
     "build": "tsc && vite build",
     "start": "node ./dist/index.cjs",
     "lint": "eslint",
-    "lint:fix": "eslint --fix"
+    "lint:fix": "eslint --fix",
+    "prepare": "husky"
   },
   "dependencies": {
     "express": "^5.1.0"
@@ -19,9 +20,14 @@
     "@types/node": "^22.14.1",
     "eslint": "^9.24.0",
     "eslint-plugin-format": "^1.0.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vite-plugin-checker": "^0.9.1",
     "vite-plugin-node": "^5.0.1"
+  },
+  "lint-staged": {
+    "*.ts": "lint:fix"
   }
 }
