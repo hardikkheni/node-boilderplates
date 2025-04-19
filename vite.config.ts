@@ -1,18 +1,18 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
 import { VitePluginNode } from 'vite-plugin-node';
-import checker from 'vite-plugin-checker'
 
 export default defineConfig({
-  
+
   build: {
     sourcemap: true,
     rollupOptions: {
       output: {
         preserveModules: true,
         dir: 'dist',
-        entryFileNames: '[name].js'
-      }
-    }
+        entryFileNames: '[name].js',
+      },
+    },
   },
   plugins: [
     checker({
@@ -26,15 +26,15 @@ export default defineConfig({
       exportName: 'viteNodeApp',
       initAppOnBoot: false,
       tsCompiler: 'esbuild',
-      swcOptions: {}
+      swcOptions: {},
     }),
   ],
   resolve: {
     alias: {
-      '@': './src'
-    }
+      '@': './src',
+    },
   },
   server: {
     port: 3000,
   },
-})
+});

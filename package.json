@@ -1,22 +1,27 @@
 {
   "name": "node-boilderplates",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "start": "node ./dist/index.js"
+    "start": "node ./dist/index.js",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^4.12.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
+    "eslint": "^9.24.0",
+    "eslint-plugin-format": "^1.0.1",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vite-plugin-checker": "^0.9.1",
     "vite-plugin-node": "^5.0.1"
-  },
-  "dependencies": {
-    "express": "^5.1.0"
   }
 }

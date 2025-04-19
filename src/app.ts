@@ -1,10 +1,10 @@
-import express from 'express'
+import express from 'express';
 
-const app = express()
+const app = express();
 
 app.get('/', (_req, res) => {
-  console.log('Hello World!')
-  res.send('Hello World!')
-})
+  console.warn('Hello World!');
+  res.send('Hello World!');
+});
 
-export default app
+export default app;
