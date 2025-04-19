@@ -13,6 +13,7 @@ A modern Node.js boilerplate project using **Vite**, **Express**, and **TypeScri
 - 🧪 **Husky** + **lint-staged** for Git hook and code linting automation
 - 🧩 **vite-plugin-node** for seamless Node integration in Vite
 - 🧾 Auto type-checking with `vite-plugin-checker`
+- 📦 Github workflow for CI/CD
 
 ---
 
@@ -42,6 +43,10 @@ This project uses pnpm. You can also use npm or yarn if preferred.
 
 ```
 .
+|── .github/
+│   └── workflows/
+│       └── lint.yml     # GitHub Actions CI workflow
+│       └── build.yml     # GitHub Actions CI workflow
 ├── .husky/
 │   └── pre-commit     # Git hook to run lint-staged on commit
 ├── .vscode/
