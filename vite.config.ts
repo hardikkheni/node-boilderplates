@@ -1,16 +1,18 @@
+import path from 'node:path';
 import { defineConfig } from 'vite';
 import checker from 'vite-plugin-checker';
 import { VitePluginNode } from 'vite-plugin-node';
 
 export default defineConfig({
-
+  root: path.resolve(__dirname),
   build: {
     sourcemap: true,
+    target: 'node22',
     rollupOptions: {
       output: {
         preserveModules: true,
         dir: 'dist',
-        entryFileNames: '[name].js',
+        entryFileNames: '[name].cjs',
       },
     },
   },
@@ -31,7 +33,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': './src',
+      '@': path.resolve(__dirname, './src'),
     },
   },
   server: {
