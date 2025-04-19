@@ -8,6 +8,7 @@ export default antfu({
     indent: 2,
     semi: true,
   },
+  ignores: ['.pnpm-store/*'],
 }, {
   rules: {
     'ts/no-redeclare': 'off',
