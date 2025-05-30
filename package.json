@@ -9,19 +9,27 @@
     "start": "node ./dist/index.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate": "drizzle-kit generate",
+    "migrate": "drizzle-kit migrate"
   },
   "dependencies": {
-    "express": "^5.1.0"
+    "dotenv": "^16.5.0",
+    "drizzle-orm": "^0.44.0",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.12.0",
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.1",
+    "@types/pg": "^8.15.2",
+    "drizzle-kit": "^0.31.1",
     "eslint": "^9.24.0",
     "eslint-plugin-format": "^1.0.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
+    "tsx": "^4.19.4",
     "typescript": "~5.7.2",
     "vite": "^6.3.1",
     "vite-plugin-checker": "^0.9.1",
