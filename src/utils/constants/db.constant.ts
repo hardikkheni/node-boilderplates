@@ -14,7 +14,7 @@ export const baseTable = {
   ...timestamps,
 } as const;
 
-export const deletedTable = {
+export const deletableTable = {
   ...baseTable,
   deletedAt: timestamp(),
 } as const;
